@@ -4,5 +4,7 @@ flask
 ipykernel
 seaborn
 scikit-learn
+database_connect
+pymongo
 
 #-e .

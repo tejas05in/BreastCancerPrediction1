@@ -1,6 +1,7 @@
 from pymongo import MongoClient
 from tj_mongo import MongoUrl
 import pandas as pd
+import os
 def get_database():
  
    # Provide the mongodb atlas url to connect python to mongodb using pymongo
@@ -24,9 +25,11 @@ def get_data():
    df = pd.DataFrame.from_records(data).drop('_id',axis=1)
    return df
    
-  
-# This is added so that many files can reuse the function get_database()
+
 if __name__ == "__main__":   
   
   data = get_data()
-  data.to_csv("D:/Python\MLProjectsPW/BreastCancerPredicition1/notebooks/data/breast_cancer.csv",index=False)
+  os.chdir('../')
+  path = os.path.dirname(os.getcwd())
+  file_name = 'breast_cancer.csv'
+  data.to_csv(os.path.join(path,'notebooks',file_name),index=False)

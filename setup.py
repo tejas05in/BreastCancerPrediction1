@@ -19,7 +19,7 @@ def get_requirements(file_path:str)->List[str]:
 
 
 setup(
-    name= "DiamondPricePrediction",
+    name= "BreastCancerPrediction",
     version= "0.0.1",
     author= "Dr. TEJAS. J",
     author_email="tejasjacademics@gmail.com",

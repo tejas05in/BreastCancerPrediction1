@@ -11,6 +11,7 @@ from sklearn.ensemble import BaggingClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.svm import SVC
 from xgboost import XGBClassifier
+from sklearn.decomposition import PCA
 from sklearn.metrics import  accuracy_score
 from src.exception import CustomException
 from src.logger import logging
@@ -37,6 +38,11 @@ class ModelTrainer:
                 test_arr[:,:-1],
                 test_arr[:,-1]
             )
+            #based on scree plot the best number of principal components = 5
+            pca = PCA(n_components=5)
+            X_train = pca.fit_transform(X_train)
+            X_test = pca.transform(X_test)
+            logging.info('X data has undergone PCA transformation into 5 features')
 
             models={
             'LogisticRegression':LogisticRegression(),

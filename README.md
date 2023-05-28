@@ -145,6 +145,7 @@ python app.py
 - Scikit learn
 - 🏦 Industrial/Hospital Use Cases
 
+Best Model Name : LogisticRegression , Accuracy Score : 0.9766081871345029
 Author: Dr. TEJAS. J
 email: tejasjacademics@gmail.com
 

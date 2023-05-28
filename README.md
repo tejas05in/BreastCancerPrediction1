@@ -118,6 +118,7 @@ cd math-prog/cpo-dataset/machine-learn/WDBC/
      163-171.
 
 #### Dataset is taken from sklear.datasets and stored in mongodb
+tj_mongo.py is a local module which contains my private mongodb url link becasue of which it has not been committed to github it can easily be replaced by your very own mongodb url and this will get the job done
 
 
 💿 Installing
@@ -143,4 +144,8 @@ python app.py
 - Machine learning
 - Scikit learn
 - 🏦 Industrial/Hospital Use Cases
+
+Author: Dr. TEJAS. J
+email: tejasjacademics@gmail.com
+
 

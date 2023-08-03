@@ -23,6 +23,7 @@ import os , sys
 @dataclass
 class ModelTrainerconfig:
     trained_model_file_path = os.path.join('artifacts','model.pkl')
+    trained_pca_file_path = os.path.join('artifacts','pca.pkl')
 
 
 class ModelTrainer:
@@ -79,6 +80,10 @@ class ModelTrainer:
 
                 file_path=self.model_trainer_config.trained_model_file_path,
                 obj = best_model
+            )
+            save_object(
+                file_path=self.model_trainer_config.trained_pca_file_path,
+                obj=pca
             )
             logging.info("Model training complete and best model saved in artifacts as model.pkl")
         except Exception as e:

@@ -73,9 +73,7 @@ class DataTransformation:
             preprocessing_obj=self.get_data_transformation_object()
 
             target_column = 'target'
-            #highly correlated columns to remove [feature engineering]
-            drop_columns = [target_column,'worst radius', 'worst texture', 'worst perimeter', 'worst area','worst concave points','mean concave points','radius error','area error','mean radius','mean perimeter']
-
+            drop_columns = [target_column]
             ##dividing the dataset into independent and dependent features
 
             ## Training data
@@ -99,7 +97,7 @@ class DataTransformation:
                 obj = preprocessing_obj
 
             )
-
+            
             logging.info("Applying preprocessing object on training and testing dataset")
 
             return (

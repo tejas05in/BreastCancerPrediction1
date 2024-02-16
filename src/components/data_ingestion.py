@@ -47,6 +47,7 @@ class DataIngestion:
       logging.info('Data Ingestion method starts')
       try:
          df = pd.read_csv(os.path.join('notebooks/data','breast_cancer.csv'))
+         # df = get_data()
          logging.info("Dataset read as pandas Dataframe")
 
          os.makedirs(os.path.dirname(self.ingestion_config.raw_data_path),exist_ok=True)

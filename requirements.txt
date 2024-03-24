@@ -1,7 +1,7 @@
 pandas
 numpy
 flask
-ipykernel
+notebook
 seaborn
 scikit-learn
 database_connect
